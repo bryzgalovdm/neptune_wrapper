@@ -3,7 +3,6 @@
 # data version, env, code, hyperameters, preprocessing parameters, metrics,
 # results, figures, model_checkpoints
 #
-# #-Author: Dmitrii Bryzgalov (bryzgalov.dm at gmail dot com)
 # version 1.0.4
 
 import os
@@ -30,11 +29,6 @@ class NeptuneWrapper():
         self.accuracySub = accuracySub
         self.figDict = figDict
         self.sourceFiles = sourceFiles
-
-        for key, value in kwargs.items():
-            self.__dict__[key] = value
-
-    def add_parameters(self, **kwargs):
 
         for key, value in kwargs.items():
             self.__dict__[key] = value
