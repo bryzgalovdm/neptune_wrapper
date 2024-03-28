@@ -34,6 +34,8 @@ jobs:
           pip install -r requirements.txt
       - name: Test with pytest
         run: |
+          export PYTHONIOENCODING=utf8
+          export PYTHONLEGACYWINDOWSSTDIO=utf-8  
           pip install pytest pytest-cov pytest-github-report
           pytest --github-report --junitxml=junit/test-results.xml --cov=neptune_wrapper --cov-report=html
       - name: Coverage comment
