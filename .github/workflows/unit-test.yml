@@ -35,9 +35,9 @@ jobs:
       - name: Test with pytest
         env:
           pytest_github_report: true
+          PYTHONIOENCODING: utf-8
+          PYTHONLEGACYWINDOWSSTDIO: utf-8
         run: |
-          set PYTHONIOENCODING=utf-8
-          set PYTHONLEGACYWINDOWSSTDIO=utf-8        
           pip install pytest pytest-cov pytest-github-report
           pytest --junitxml=junit/test-results.xml --cov=neptune_wrapper --cov-report=html
       - name: Coverage comment
