@@ -34,11 +34,11 @@ jobs:
           pip install -r requirements.txt
       - name: Test with pytest
         run: |
-          pip install pytest pytest-cov
+          pip install pytest pytest-cov pytest-github-report
+          env:
+            pytest_github_report: true
           pytest --junitxml=junit/test-results.xml --cov=neptune_wrapper --cov-report=html
-      - name: Test report
-        uses: EnricoMi/publish-unit-test-result-action/windows@v2
-        if: success() || failure()
+      - name: Coverage comment
+        uses: py-cov-action/python-coverage-comment-action@v3
         with:
-          files: |
-            junit/*.xml
+          GITHUB_TOKEN: ${{ github.token }}
