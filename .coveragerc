@@ -1,0 +1,7 @@
+[run]
+relative_files = true
+
+[paths]
+source =
+    */project/module
+    *\project\module

@@ -1,7 +1,7 @@
 # Generated together with Professional Coder plugin of chatGPT
 
-from neptune_wrapper.utils import Params, manage_folders
-from neptune_wrapper.utils import name_output_folder, find_dir_number
+from ..neptune_wrapper.utils import Params, manage_folders
+from ..neptune_wrapper.utils import name_output_folder, find_dir_number
 import pytest
 import pathlib
 import shutil
