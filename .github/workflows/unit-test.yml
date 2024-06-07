@@ -22,11 +22,11 @@ jobs:
       - name: Test with pytest
         run: | 
           pip install pytest pytest-cov pytest-github-report
-          pytest -s --github-report --junitxml=junit/test-results.xml --cov=neptune_wrapper --cov-report=html
+          pytest --github-report --junitxml=junit/test-results.xml --cov=neptune_wrapper --cov-report=html
       - name: Coverage comment
         uses: py-cov-action/python-coverage-comment-action@v3
         with:
-          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   # test-on-windows:
   #   runs-on: windows-latest
