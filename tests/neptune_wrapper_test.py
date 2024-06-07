@@ -39,7 +39,7 @@ def test_create_run_valid(nwrapper, request):
     # For testing purposes, we check if the run directory was created
     d = Path.cwd()
     print('current directory:', str(d))
-    for p in d.joinpath('.neptune').glob('*'):
+    for p in d.joinpath('.neptune', 'offline').glob('*'):
         print(str(p))
     assert Path(f'.neptune/offline/run__{id}').exists()
 
