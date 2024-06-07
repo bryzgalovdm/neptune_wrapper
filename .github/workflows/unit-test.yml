@@ -17,14 +17,12 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - name: Install dependencies
         run: |
-          echo "Checking for the directory"
-          ls
           python -m pip install --upgrade pip
           pip install -r requirements.txt
       - name: Test with pytest
         run: | 
           pip install pytest pytest-cov pytest-github-report
-          pytest --github-report --junitxml=junit/test-results.xml --cov=neptune_wrapper --cov-report=html
+          pytest -s --github-report --junitxml=junit/test-results.xml --cov=neptune_wrapper --cov-report=html
       - name: Coverage comment
         uses: py-cov-action/python-coverage-comment-action@v3
         with:

@@ -36,6 +36,11 @@ def test_create_run_valid(nwrapper, request):
     wrapper.create_run(mode='offline')
     id = wrapper.run._id
     wrapper.stop_run() # to kill the process
+    # For testing purposes, we check if the run directory was created
+    d = Path.cwd()
+    print('current directory:', str(d))
+    for p in d.glob('*'):
+        print(str(p))
     assert Path(f'.neptune/offline/run__{id}').exists()
 
 def test_create_run_invalid(neptune_wrapper_params):
