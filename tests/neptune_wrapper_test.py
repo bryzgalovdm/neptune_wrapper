@@ -36,12 +36,11 @@ def test_create_run_valid(nwrapper, request):
     wrapper.create_run(mode='offline')
     id = wrapper.run._id
     wrapper.stop_run() # to kill the process
-    # For testing purposes, we check if the run directory was created
-    d = Path.cwd()
-    print('current directory:', str(d))
-    for p in d.joinpath('.neptune', 'offline').glob('*'):
-        print(str(p))
-    assert Path(f'.neptune/offline/run__{id}').exists()
+    # Run folder could have any suffixes. Test whether we have the folder in offline with id
+    testpath = Path('.neptune/offline/')
+    listpath = [str(i) for i in testpath.glob('*')] # list of all folders in offline
+    boolpath = [id in i for i in listpath] # check if id is in any of the folders
+    assert any(boolpath)
 
 def test_create_run_invalid(neptune_wrapper_params):
     with pytest.raises(ValueError):
