@@ -1,3 +1,9 @@
+<!-- ========================== -->
+
+[![neptune_wrapper CI](https://github.com/bryzgalovdm/neptune_wrapper/workflows/unit-test.yml/badge.svg)](https://github.com/bryzgalovdm/neptune_wrapper/workflows/unit-test.yml)
+[![Coverage Status](https://raw.githubusercontent.com/bryzgalovdm/neptune_wrapper/python-coverage-comment-action-data/badge.svg)](https://raw.githubusercontent.com/bryzgalovdm/neptune_wrapper/python-coverage-comment-action-data/badge.svg)
+![GitHub contributors](https://img.shields.io/github/contributors/bryzgalovdm/neptune_wrapper)
+
 # Basics of machine learning experiment tracking
 
 When looking for optimal architecture or hyperparameters, very soon you will find 
