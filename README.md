@@ -2,12 +2,12 @@
 
 [Full report](https://htmlpreview.github.io/?https://github.com/bryzgalovdm/neptune_wrapper/blob/python-coverage-comment-action-data/htmlcov/index.html)
 
-| Name                                 |    Stmts |     Miss |   Cover |   Missing |
-|------------------------------------- | -------: | -------: | ------: | --------: |
-| neptune\_wrapper/\_\_init\_\_.py     |        0 |        0 |    100% |           |
-| neptune\_wrapper/neptune\_wrapper.py |       43 |        6 |     86% |23-24, 29, 52, 55, 58 |
-| neptune\_wrapper/utils.py            |       46 |        1 |     98% |       127 |
-|                            **TOTAL** |   **89** |    **7** | **92%** |           |
+| Name                             |    Stmts |     Miss |   Cover |   Missing |
+|--------------------------------- | -------: | -------: | ------: | --------: |
+| neptune\_wrapper/\_\_init\_\_.py |        0 |        0 |    100% |           |
+| neptune\_wrapper/utils.py        |       46 |        1 |     98% |       127 |
+| neptune\_wrapper/wrapper.py      |       43 |        6 |     86% |23-24, 29, 52, 55, 58 |
+|                        **TOTAL** |   **89** |    **7** | **92%** |           |
 
 
 ## Setup coverage badge
