@@ -1,7 +1,7 @@
 import pytest
 from pathlib import Path
 import shutil
-from ..neptune_wrapper.neptune_wrapper import NeptuneWrapper
+from ..neptune_wrapper.wrapper import NeptuneWrapper
 from ..neptune_wrapper.utils import Params
 
 @pytest.fixture

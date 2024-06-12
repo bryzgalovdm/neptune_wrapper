@@ -57,7 +57,7 @@ Voilà! To start logging experiments in your new project, you needed:
 To start the tracking in your code, you need to (WARNING: this is not full code but a snippet):
 ### Tensorflow
 ```
-from neptune_wrapper import NeptuneWrapper
+from neptune_wrapper.wrapper import NeptuneWrapper
 from src.networks.net import VanillaNet
 from src.tracking.neptune_config import API
 ...
