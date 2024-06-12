@@ -4,6 +4,19 @@
 [![Coverage Status](https://raw.githubusercontent.com/bryzgalovdm/neptune_wrapper/python-coverage-comment-action-data/badge.svg)](https://raw.githubusercontent.com/bryzgalovdm/neptune_wrapper/python-coverage-comment-action-data/badge.svg)
 ![GitHub contributors](https://img.shields.io/github/contributors/bryzgalovdm/neptune_wrapper)
 
+# Introduction
+This is a wrapper for Neptune.AI experiment tracking. It allows to easily log the 
+parameters, metrics and results of the ML experiments in a structured way. It is made to
+provide OS-independent, more intuitive way to use Neptune.AI tracking in your code.
+
+To be perfectly honest, I use it also as a way to learn how to create a package and
+publish it on PyPi.
+
+# Installation
+```
+pip install neptune-wrapper
+```
+
 # Basics of machine learning experiment tracking
 
 When looking for optimal architecture or hyperparameters, very soon you will find 
